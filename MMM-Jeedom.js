@@ -37,9 +37,9 @@ Module.register("MMM-Jeedom",{
 		this.loaded = false;
 		var self = this; 
 		
-		var ModuleJeedomHidden = false; // par défaut on affiche le module (si pas de module carousel ou autre pour le cacher)
-		var IntervalID = 0; // à déclarer pour chaque instance pour pouvoir couper la mise à jour pour chacune
-		var lastUpdate = 0;
+		this.ModuleJeedomHidden = false; // par défaut on affiche le module (si pas de module carousel ou autre pour le cacher)
+		this.IntervalID = 0; // à déclarer pour chaque instance pour pouvoir couper la mise à jour pour chacune
+		this.lastUpdate = 0;
 		
 		this.IntervalID = setInterval(function() { self.updateJeedom(); }, this.config.updateInterval);
 		
